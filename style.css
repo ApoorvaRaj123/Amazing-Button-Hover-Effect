@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #000;
+}
+
+button{
+    margin: 40px;
+    height: 5vw;
+    width: 15vw;
+    color: navajowhite;
+    background-color: transparent;
+    border: 2px solid navajowhite;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+button::after{
+    content: "";
+    background-color: navajowhite;
+    height: 0%;
+    width: 130%;
+    border-radius: 40%;
+    position: absolute;
+    top: 90%;
+    left: -15%;
+    z-index: -1;
+}
+button:hover{
+    color: #000;
+}
+button:hover::after{
+    height: 140%;
+    animation-name: anime; 
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anime{
+    from{
+        top: 100%;
+    }
+    to{
+        top: -20%;
+    }
+}
